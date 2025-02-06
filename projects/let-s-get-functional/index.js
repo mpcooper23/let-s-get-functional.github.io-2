@@ -56,9 +56,32 @@ var youngestCustomer;
 
 var averageBalance;
 
+
+/*### 6: `firstLetterCount`
+ - **Objective**: Find how many customer's names begin with a given letter
+ - **Input**: `Array`, `Letter`
+ - **Output**: `Number`
+ - **Constraints**:*/
+ 
 var firstLetterCount;
 
+/**
+ * ### 7: `friendFirstLetterCount`
+ - **Objective**: Find how many friends of a given customer have names that start with a given letter
+ - **Input**: `Array`, `Customer`, `Letter`
+ - **Output**: `Number`
+ - **Constraints**:
+ */
+
 var friendFirstLetterCount;
+
+/**
+ * ### 8: `friendsCount`
+ - **Objective**: Find the customers' names that have a given customer's name in their friends list
+ - **Input**: `Array`, `Name`
+ - **Output**: `Array`
+ - **Constraints**:
+ */
 
 var friendsCount;
 
