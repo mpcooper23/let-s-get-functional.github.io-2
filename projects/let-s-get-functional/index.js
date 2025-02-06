@@ -64,7 +64,7 @@ var averageBalance;
  - **Constraints**:*/
  
 var firstLetterCount = function(array, letter){
-let firstL = _.filter(array, costumer => costumer.name[0] === letter);
+let firstL = _.filter(array, costumer => costumer.name[0].toUpperCase() === letter.toUpperCase());
 return firstL.length; 
 }
 
