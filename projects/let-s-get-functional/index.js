@@ -44,7 +44,7 @@ return male.length;
  - **Constraints**: use `reduce`
  */
 
-
+//how would you solve this using reduce?
 var femaleCount = function(array){
     let female = _.filter(array, customer => customer.gender === 'female');
     return female.length; 
