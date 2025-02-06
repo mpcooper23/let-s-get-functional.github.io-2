@@ -63,7 +63,10 @@ var averageBalance;
  - **Output**: `Number`
  - **Constraints**:*/
  
-var firstLetterCount;
+var firstLetterCount = function(array, letter){
+let firstL = array_.filter(array, costumer => costumer.name[0] === letter);
+return firstL.length; 
+}
 
 /**
  * ### 7: `friendFirstLetterCount`
