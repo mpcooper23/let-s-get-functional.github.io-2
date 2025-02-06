@@ -76,7 +76,10 @@ return firstL.length;
  - **Constraints**:
  */
 
-var friendFirstLetterCount;
+var friendFirstLetterCount = function(array, costumer, letter){
+let friendCount = _.filter((array, costumer) => costumer.name[0].toUpperCase() === letter.toUpperCase().map(friend => friend.name[0].toUpperCase() === letter.toUpperCase()));
+return friendCount;
+}
 
 /**
  * ### 8: `friendsCount`
@@ -86,7 +89,11 @@ var friendFirstLetterCount;
  - **Constraints**:
  */
 
-var friendsCount;
+var friendsCount = function(array, name){
+
+}
+
+
 
 var topThreeTags;
 
