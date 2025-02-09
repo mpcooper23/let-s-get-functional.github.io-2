@@ -50,8 +50,9 @@ var femaleCount = function(array){
    // return female.length; 
    let female = _.reduce(array, (accumulator, customer) => {
     if(customer.gender === 'female'){
-        accumulator += current
+        accumulator += 1
     }
+    return accumulator; 
    }, 0)
 }
 
