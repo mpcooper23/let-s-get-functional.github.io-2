@@ -46,15 +46,28 @@ return male.length;
 
 //how would you solve this using reduce?
 var femaleCount = function(array){
-    let female = _.filter(array, customer => customer.gender === 'female');
-    return female.length; 
+   // let female = _.filter(array, customer => customer.gender === 'female');
+   // return female.length; 
+   let female = _.reduce(array, (accumulator, customer) => {
+    if(customer.gender === 'female'){
+        accumulator += current
+    }
+   }, 0)
 }
 
-var oldestCustomer;
 
-var youngestCustomer;
 
-var averageBalance;
+var oldestCustomer = function(){
+
+}
+
+var youngestCustomer = function(){
+
+}
+
+var averageBalance = function(){
+
+}
 
 
 /*### 6: `firstLetterCount`
