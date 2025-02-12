@@ -80,10 +80,23 @@ var oldestCustomer = function(array) {
   - **Output**: `String`
   - **Constraints**:*/
 
-var youngestCustomer = function(){
-
+var youngestCustomer = function(array){
+let youngest = _.reduce(array, function(accumulator, item){
+    if(item.age < accumulator.age){
+        return item;
+    } else {
+        return accumulator
+    }
+})
+return youngest.name;
 }
 
+/*### 5: `averageBalance`
+ - **Objective**: Find the average balance of all customers
+ - **Input**: `Array`
+ - **Output**: `Number`
+ - **Constraints**:*/
+ 
 var averageBalance = function(){
 
 }
