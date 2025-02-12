@@ -96,8 +96,8 @@ return youngest.name;
  - **Input**: `Array`
  - **Output**: `Number`
  - **Constraints**:*/
- 
-var averageBalance = function(){
+
+var averageBalance = function(array){
 
 }
 
