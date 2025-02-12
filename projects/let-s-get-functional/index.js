@@ -17,6 +17,7 @@ var _ = require('underbar');
  * 4. To test your work, run the following command in your terminal:
  *
  *    npm start --prefix ./let-s-get-functional.github.io-2/projects/let-s-get-functional
+}
  *
  *    IMPORTANT: Make sure you replace <YOUR_GITHUB_FOLDER with your actual github folder name that is in your workspace.
  */
@@ -46,9 +47,7 @@ return male.length;
 
 //how would you solve this using reduce?
 var femaleCount = function(array){
-   // let female = _.filter(array, customer => customer.gender === 'female');
-   // return female.length; 
-   let female = _.reduce(array, (accumulator, customer) => {
+   return _.reduce(array, (accumulator, customer) => {
     if(customer.gender === 'female'){
         accumulator += 1
     }
