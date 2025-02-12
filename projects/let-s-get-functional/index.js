@@ -17,7 +17,6 @@ var _ = require('underbar');
  * 4. To test your work, run the following command in your terminal:
  *
  *    npm start --prefix ./let-s-get-functional.github.io-2/projects/let-s-get-functional
-}
  *
  *    IMPORTANT: Make sure you replace <YOUR_GITHUB_FOLDER with your actual github folder name that is in your workspace.
  */
@@ -55,11 +54,31 @@ var femaleCount = function(array){
    }, 0)
 }
 
+/*### 3: `oldestCustomer`
+ - **Objective**: Find the oldest customer's name
+ - **Input**: `Array`
+ - **Output**: `String`
+ - **Constraints**:
+*/
 
-
-var oldestCustomer = function(){
-
-}
+var oldestCustomer = function(array) {
+    // Use _.reduce to find the oldest customer
+    let oldest = _.reduce(array, function(accumulator, current) {
+      if (current.age > accumulator.age) {
+        return current;
+      } else {
+        return accumulator;
+      }
+    }); // empty seed means: Initialize with the first customer in the array
+  
+    return oldest.name;
+  };
+  
+  /*### 4: `youngestCustomer`
+  - **Objective**: Find the youngest customer's name
+  - **Input**: `Array`
+  - **Output**: `String`
+  - **Constraints**:*/
 
 var youngestCustomer = function(){
 
