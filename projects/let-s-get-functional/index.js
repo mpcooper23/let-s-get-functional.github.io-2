@@ -97,11 +97,18 @@ return youngest.name;
  - **Output**: `Number`
  - **Constraints**:*/
 
-var averageBalance = function(array){
-
-}
-
-
+ var averageBalance = function(array) {
+    // Use _.reduce to calculate the total balance
+    let totalBalance = _.reduce(array, function(accumulator, current) {
+      return accumulator + Number(current.balance);
+    }, 0);
+  
+    // Calculate the average balance
+    let average = totalBalance / array.length;
+  
+    return average;
+  };
+  
 /*### 6: `firstLetterCount`
  - **Objective**: Find how many customer's names begin with a given letter
  - **Input**: `Array`, `Letter`
@@ -121,11 +128,32 @@ return firstL.length;
  - **Constraints**:
  */
 
-var friendFirstLetterCount = function(array, costumer, letter){
-let friendCount = _.filter((array, costumer) => costumer.name[0].toUpperCase() === letter.toUpperCase().map(friend => friend.name[0].toUpperCase() === letter.toUpperCase()));
-return friendCount;
-}
-
+ var friendFirstLetterCount = function(array, customerName, letter) {
+    // Find the customer in the array
+    let customer = array.find(c => c.name === customerName);
+  
+    // If the customer is not found or has no friends, return 0
+    if (!customer || !customer.friends) {
+      return 0;
+    }
+  
+    // Use _.filter to find friends whose names start with the specified letter
+    let friendCount = _.filter(customer.friends, friend => {
+      return friend.name[0].toUpperCase() === letter.toUpperCase();
+    }).length;
+  
+    return friendCount;
+  };
+  
+  // Example usage:
+ /* const customers = [
+    { name: 'Alice', friends: [{ name: 'Bob' }, { name: 'Charlie' }, { name: 'David' }] },
+    { name: 'Eve', friends: [{ name: 'Frank' }, { name: 'Grace' }] }
+  ];
+  
+  console.log(friendFirstLetterCount(customers, 'Alice', 'B')); // Output: 1
+  console.log(friendFirstLetterCount(customers, 'Eve', 'G'));   // Output: 1*/
+  
 /**
  * ### 8: `friendsCount`
  - **Objective**: Find the customers' names that have a given customer's name in their friends list
