@@ -174,9 +174,22 @@ return firstL.length;
  - **Output**: `Array`
  - **Constraints**:*/
 
-var topThreeTags = function(){
+ var topThreeTags = function(array) {
+  // Step 1: Flatten the tags into a single array
+  let allTags = array.flatMap(customer => customer.tags);
 
-}
+  // Step 2: Count occurrences of each tag
+  let tagCounts = allTags.reduce((counts, tag) => {
+    counts[tag] = (counts[tag] || 0) + 1;
+    return counts;
+  }, {});
+
+  // Step 3: Sort tags by count and select the top three
+  return Object.keys(tagCounts)
+    .sort((a, b) => tagCounts[b] - tagCounts[a])
+    .slice(0, 3);
+};
+
 
 /**
  * ### 10: `genderCount`
@@ -194,7 +207,7 @@ var topThreeTags = function(){
  */
 
 var genderCount = function(){
-  
+
 }
 
 //////////////////////////////////////////////////////////////////////
