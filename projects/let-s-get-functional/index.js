@@ -206,9 +206,14 @@ return firstL.length;
  - **Constraints**: Use `reduce`
  */
 
-var genderCount = function(){
+ var genderCount = function(array) {
+  return array.reduce((acc, customer) => {
+    // Initialize the gender count if it doesn't exist
+    acc[customer.gender] = (acc[customer.gender] || 0) + 1;
+    return acc;
+  }, {});
+};
 
-}
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
