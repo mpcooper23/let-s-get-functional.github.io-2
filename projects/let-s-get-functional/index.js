@@ -168,8 +168,28 @@ return firstL.length;
   ).map(customer => customer.name);
 };
 
+/* ### 9: `topThreeTags`
+ - **Objective**: Find the three most common tags among all customers' associated tags
+ - **Input**: `Array`
+ - **Output**: `Array`
+ - **Constraints**:*/
 
 var topThreeTags;
+
+/**
+ * ### 10: `genderCount`
+ - **Objective**: Create a summary of genders, the output should be:
+```javascript
+{
+    male: 3,
+    female: 4,
+    non-binary: 1
+}
+```
+ - **Input**: `Array`
+ - **Output**: `Object`
+ - **Constraints**: Use `reduce`
+ */
 
 var genderCount;
 
