@@ -162,10 +162,11 @@ return firstL.length;
  - **Constraints**:
  */
 
-var friendsCount = function(array, name){
-
-}
-
+ var friendsCount = function(array, name) {
+  return array.filter(customer => 
+    customer.friends && customer.friends.includes(name)
+  ).map(customer => customer.name);
+};
 
 
 var topThreeTags;
