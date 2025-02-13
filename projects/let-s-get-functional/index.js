@@ -174,7 +174,9 @@ return firstL.length;
  - **Output**: `Array`
  - **Constraints**:*/
 
-var topThreeTags;
+var topThreeTags = function(){
+
+}
 
 /**
  * ### 10: `genderCount`
@@ -191,7 +193,9 @@ var topThreeTags;
  - **Constraints**: Use `reduce`
  */
 
-var genderCount;
+var genderCount = function(){
+  
+}
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
