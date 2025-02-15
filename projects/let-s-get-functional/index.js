@@ -97,17 +97,18 @@ return youngest.name;
  - **Output**: `Number`
  - **Constraints**:*/
 
- var averageBalance = function(array) {
-    // Use _.reduce to calculate the total balance
-    let totalBalance = _.reduce(array, function(accumulator, current) {
-      return accumulator + Number(current.balance);
-    }, 0);
-  
-    // Calculate the average balance
-    let average = totalBalance / array.length;
-  
-    return average;
-  };
+ const averageBalance = function(customers) {
+  // Calculate the total balance using reduce
+  const totalBalance = customers.reduce((acc, customer) => {
+    return acc + Number(customer.balance);
+  }, 0);
+
+  // Calculate the average balance
+  const average = totalBalance / customers.length;
+
+  return average;
+};
+
   
 /*### 6: `firstLetterCount`
  - **Objective**: Find how many customer's names begin with a given letter
