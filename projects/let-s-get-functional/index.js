@@ -167,11 +167,10 @@ return firstL.length;
  - **Constraints**:
  */
 
- var friendsCount = function(friends, name) {
-  let friends = Object.keys(friends)
-  return friends.filter(customer => 
-    customer.friends && customer.friends.includes(name)
-  ).map(customer => customer.name);
+ var friendsCount = function(customers, name) {
+  return customers
+    .filter(customer => customer.friends.some(friend => friend.name === name))
+    .map(customer => customer.name);
 };
 
 /* ### 9: `topThreeTags`
