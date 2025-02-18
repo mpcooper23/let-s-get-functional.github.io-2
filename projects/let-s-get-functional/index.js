@@ -103,7 +103,7 @@ return youngest.name;
   
   // Calculate the total balance using reduce
   const totalBalance = customers.reduce((acc, customer) => {
-    return acc + Number(customer.balance);
+    return acc + averageB;
   }, 0);
 
   // Calculate the average balance
