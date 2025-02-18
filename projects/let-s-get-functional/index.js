@@ -98,12 +98,11 @@ return youngest.name;
  - **Constraints**:*/
 
  const averageBalance = function(customers) {
-  //create all-numerical balance
-  var averageB = balance.replaceAll(/[$,]/g, '')
-  
   // Calculate the total balance using reduce
   const totalBalance = customers.reduce((acc, customer) => {
-    return acc + averageB;
+    // Remove $ and , from the balance and convert to a number
+    const numericBalance = parseFloat(customer.balance.replace(/[$,]/g, ''));
+    return acc + numericBalance;
   }, 0);
 
   // Calculate the average balance
@@ -111,6 +110,7 @@ return youngest.name;
 
   return average;
 };
+
 
   
 /*### 6: `firstLetterCount`
