@@ -99,7 +99,7 @@ return youngest.name;
 
  const averageBalance = function(customers) {
   //create all-numerical balance
-  var averageB = balance.replaceAll(\[$,]\genderCount, '')
+  var averageB = balance.replaceAll(\[$,]\g, '')
   
   // Calculate the total balance using reduce
   const totalBalance = customers.reduce((acc, customer) => {
