@@ -112,6 +112,7 @@ return youngest.name;
 };
 
 
+
   
 /*### 6: `firstLetterCount`
  - **Objective**: Find how many customer's names begin with a given letter
@@ -166,8 +167,9 @@ return firstL.length;
  - **Constraints**:
  */
 
- var friendsCount = function(array, name) {
-  return array.filter(customer => 
+ var friendsCount = function(friends, name) {
+  let friends = Object.keys(friends)
+  return friends.filter(customer => 
     customer.friends && customer.friends.includes(name)
   ).map(customer => customer.name);
 };
