@@ -98,6 +98,9 @@ return youngest.name;
  - **Constraints**:*/
 
  const averageBalance = function(customers) {
+  //create all-numerical balance
+  var averageB = balance.replaceAll(\[$,]\genderCount, '')
+  
   // Calculate the total balance using reduce
   const totalBalance = customers.reduce((acc, customer) => {
     return acc + Number(customer.balance);
